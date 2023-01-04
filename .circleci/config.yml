@@ -49,7 +49,15 @@ jobs:
 workflows:
   udagram:
     jobs:
-      - deploy
-      # - deploy:
-      #     requires:
-      #         - build
+      - build
+      - hold:
+          filters:
+            branches:
+              only:
+                - master
+          type: approval
+          requires:
+            - build
+      - deploy:
+          requires:
+            - hold
