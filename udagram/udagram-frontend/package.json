@@ -6,7 +6,7 @@
   "scripts": {
     "ng": "ng ",
     "start": "ng serve --configuration production ",
-    "build": "ng build --configuration production ",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider&&ng build --configuration production ",
     "deploy": "npm i && npm run build &&chmod +x bin/deploy.sh &&sh bin/deploy.sh",
     "test": "ng test --watch=false",
     "lint": "ng lint",
