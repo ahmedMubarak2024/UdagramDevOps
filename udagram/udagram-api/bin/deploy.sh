@@ -10,5 +10,5 @@ eb setenv SALT_ROUNDS = echo $SALT_ROUNDS
 eb setenv JWT_SECRET = echo $JWT_SECRET
 eb setenv AWS_BUCKET= echo $AWS_BUCKET
 eb setenv AWS_REGION= echo $AWS_REGION
-
+eb setenv TEST= TTT
 eb deploy
