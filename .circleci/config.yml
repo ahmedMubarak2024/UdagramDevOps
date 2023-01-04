@@ -28,7 +28,7 @@ jobs:
       #     command: npm run frontend:lint
       - run:
           name: Front-End Build
-          command: npm run frontend:buildI      
+          command: npm run frontend:build    
       - run:
           name: API Build
           command: npm run api:build
