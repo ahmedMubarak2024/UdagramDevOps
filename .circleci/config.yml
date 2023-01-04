@@ -28,7 +28,7 @@ jobs:
       #     command: npm run frontend:lint
       - run:
           name: Front-End Build
-          command: npm run frontend:build    
+          command: npm run frontend:buildI      
       - run:
           name: API Build
           command: npm run api:build
@@ -37,10 +37,12 @@ jobs:
       - image: "cimg/base:stable"
       # more setup needed for aws, node, elastic beanstalk
     steps:
-    
+      - node/install
+      - checkout
+      - aws-cli/setup
+      - eb/setup 
       - run:
           name: Deploy App
-          # TODO: Install, build, deploy in both apps
           command: npm run deploy
             
 workflows:
@@ -56,5 +58,5 @@ workflows:
           requires:
             - build
       - deploy:
-          requires:
-            - hold
+          # requires:
+          #   - hold
