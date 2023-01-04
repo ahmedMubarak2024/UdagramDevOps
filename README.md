@@ -97,7 +97,10 @@ we are using aws services
 
 - Elastic Beanstalk Cli for deployment
 
+- aws S3 bucket for file even if you are running local you need it
+
 ## Pipeline process
 
 Pileline Currently working on master branch once commit is added it will trigger build script if success it will 
-wait for someone to Approve once Approved it will deploy the backend and frontend 
+wait for someone to Approve once Approved it will deploy the backend and frontend
+
