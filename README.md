@@ -74,3 +74,30 @@ The e2e tests are using Protractor and Jasmine.
 ## Links
 FrontEnd url is [http://udagram-mub-nd03-frontend.s3-website-us-east-1.amazonaws.com/home]
 BackEnd url is [http://udagram-api-dev.eba-e5677xme.us-east-1.elasticbeanstalk.com/]
+
+## Infrastructure
+we are using aws services
+
+1. RDS postgres database
+2. Elastic Beanstack to host our nodejs app
+3. s3 backet for files
+4. s3 bucket for Frontend
+
+## App Dependencies
+
+- Node v14 or 16(LTS) or more recent.
+
+- npm 6.14.8 (LTS) or more recent, Yarn can work but was not tested for this project
+
+- AWS CLI v2 for deployment
+
+- PostgreSQL database
+
+- Angular
+
+- Elastic Beanstalk Cli for deployment
+
+## Pipeline process
+
+Pileline Currently working on master branch once commit is added it will trigger build script if success it will 
+wait for someone to Approve once Approved it will deploy the backend and frontend 
